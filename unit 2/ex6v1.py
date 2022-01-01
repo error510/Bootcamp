@@ -18,19 +18,26 @@ MatrixfiT = Matrixfi.T
 def typeOfMatrix (mtrx):
     
     i = mtrx.shape
+    # create a zero matrix with he same n of rows and columns as the input and comparing them
     if((n.zeros((i[0],i[1]),float) == mtrx).all()):
             print('this is a zero matix')
     elif((i[0]==mtrx.shape[1])) :
         identitym = n.identity(i[0])
         clone = copy.copy(mtrx)
         clone[n.diag_indices_from(clone)]= 0
+     # create an identity matrix with he same n of rows and columns as the input and comparing them
         if((mtrx==identitym).all()):
             print('this is an identity matrix')
         elif((clone==n.zeros((i[0],i[1]),float)).all()):
+      # create a clone of the input but the diagonal numbers are zeros and comparing it with  zero matrix with he same n of rows and columns as the input
+    # if true that means that the input matrix numbers are all zeroes except the diagonal , it can not be null because we already checked that
           print('this is a diagonal matrix')         
         elif(i[0]==i[1]):
             trueHolder = []
             listofindex = list(range(1,i[0])) 
+            # checking each row starting from the second that is being [1] represented by the variablr l 
+            # and  including just the numbers below the diagonal ,that is  being the change in variable k
+            # ex : if l=3 than k = 2 , k = 1 , k = 0 // if l = 1 than k = 0 ......ect
             for l in listofindex :
                 k = l-1
                 while(k>=0):
