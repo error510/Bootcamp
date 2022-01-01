@@ -43,6 +43,7 @@ def typeOfMatrix (mtrx):
             if(all(element == True for element in trueHolder)):
                 print('this is a lower triangular matrix')       
             else :
+  # the same concept as the lower triangulat matrix 
               trueHolder = []
               listofindex = list(range(0,i[0]))
               for l in listofindex :
@@ -58,13 +59,16 @@ def typeOfMatrix (mtrx):
                   print('this is an upper triangular matrix')        
               else : 
                   print('just an ordinary matrix')
+    # if none than this is a normal matrix
     else:
         print('just an ordinary matrix .')
 
 typeOfMatrix(Matrixfi)
 
 # norms 
+# a random column vector
 vec = n.array([4,0,8])
+#calculating the norms
 l1 = norm(vec,1)
 l2 = norm(vec)
 print(l1,l2)
