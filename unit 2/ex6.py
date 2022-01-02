@@ -8,9 +8,11 @@ from PIL import Image
 
 theImage = p.Image.open('fr.png')
 arrayfi = n.asarray(theImage)
+##create the transpose of this array
 arrayfiT = arrayfi.T
-# the array is too big to be a matrix so instead i will take just a part of it 
+# the array is too big to be a matrix so instead i will take just a part of it , 17*48 image you can check it in the folder named unit 2 
 Matrixfi = arrayfi[9][4:8]
+#create the transpose of this matrix 
 MatrixfiT = Matrixfi.T
 
 # check if tha matrix is diagonal / identity / triangular(lower/upper)
