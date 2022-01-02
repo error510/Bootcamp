@@ -40,6 +40,7 @@ def typeOfMatrix (mtrx):
             # checking each row starting from the second that is being [1] represented by the variablr l 
             # and  including just the numbers below the diagonal ,that is  being the change in variable k
             # ex : if l=3 than k = 2 , k = 1 , k = 0 // if l = 1 than k = 0 ......ect
+            # finally if all the appended values to the list named trueholder are true than this is a lower t m otherwise the execution continue
             for l in listofindex :
                 k = l-1
                 while(k>=0):
